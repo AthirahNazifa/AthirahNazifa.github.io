@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -165,7 +166,9 @@
     }
 
     @keyframes avatarFloat {
-      0%, 100% {
+
+      0%,
+      100% {
         transform: translateY(0);
       }
 
@@ -180,12 +183,10 @@
       letter-spacing: -3px;
       margin-bottom: 18px;
 
-      background: linear-gradient(
-        90deg,
-        #ffffff,
-        #aeb7ff,
-        #ffffff
-      );
+      background: linear-gradient(90deg,
+          #ffffff,
+          #aeb7ff,
+          #ffffff);
 
       background-size: 200% auto;
       color: transparent;
@@ -358,6 +359,92 @@
     }
 
     /* =========================
+   Project
+========================== */
+
+    .project-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+
+      padding: 28px;
+
+      border: 1px solid #292f3d;
+      border-radius: 18px;
+
+      background: rgba(21, 25, 34, 0.75);
+
+      backdrop-filter: blur(10px);
+
+      transition: 0.35s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      border-color: #48506a;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    }
+
+    .project-info {
+      flex: 1;
+    }
+
+    .project-info h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .project-info p {
+      color: #9da5b5;
+      line-height: 1.7;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .project-tech span {
+      padding: 6px 10px;
+
+      border: 1px solid #303747;
+      border-radius: 999px;
+
+      color: #c0c7ff;
+      background: #151922;
+
+      font-size: 12px;
+    }
+
+    .project-link {
+      flex-shrink: 0;
+
+      padding: 11px 18px;
+
+      border: 1px solid #303747;
+      border-radius: 10px;
+
+      background: #151922;
+      color: #c0c7ff;
+
+      text-decoration: none;
+      font-size: 14px;
+
+      transition: 0.3s ease;
+    }
+
+    .project-link:hover {
+      transform: translateY(-3px);
+      border-color: #7782ff;
+      background: #1b2030;
+      color: #ffffff;
+    }
+
+    /* =========================
        Skills
     ========================== */
 
@@ -498,6 +585,12 @@
       section:not(#home) {
         padding: 75px 0;
       }
+
+      .project-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
     }
 
     @media (max-width: 480px) {
@@ -533,7 +626,6 @@
         padding: 24px;
       }
     }
-
   </style>
 </head>
 
@@ -545,6 +637,7 @@
     <a href="#home">Home</a>
     <a href="#about">About</a>
     <a href="#education">Education</a>
+    <a href="#project">Project</a>
     <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -687,6 +780,53 @@
 
     </section>
 
+    <!-- PROJECT -->
+
+    <section id="project">
+
+      <div class="section-content reveal">
+
+        <p class="section-label">
+          03 — Project
+        </p>
+
+        <h2 class="section-title">
+          Featured project
+        </h2>
+
+        <div class="project-card">
+
+          <div class="project-info">
+
+            <h3>
+              GloweeSkin
+            </h3>
+
+            <p>
+              An Android skincare management mobile app that helps
+              users explore skincare products based on their skin type
+              and concerns, with product comparisons, reviews,
+              recommendations and skincare routine reminders.
+            </p>
+
+            <div class="project-tech">
+              <span>Java</span>
+              <span>Android Studio</span>
+              <span>Firebase</span>
+              <span>Figma</span>
+            </div>
+
+          </div>
+
+          <a class="project-link" href="https://github.com/AthirahNazifa/skincare-management-android-app.git" target="_blank" rel="noopener noreferrer">
+            View Repository
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
 
     <!-- SKILLS -->
 
@@ -695,7 +835,7 @@
       <div class="section-content reveal">
 
         <p class="section-label">
-          03 — Skills
+          04 — Skills
         </p>
 
         <h2 class="section-title">
@@ -734,7 +874,7 @@
       <div class="section-content contact reveal">
 
         <p class="section-label">
-          04 — Contact
+          05 — Contact
         </p>
 
         <h2 class="section-title">
@@ -748,19 +888,12 @@
 
         <div class="contact-links">
 
-          <a
-            class="contact-link"
-            href="mailto:athirahnazifa02@gmail.com"
-          >
+          <a class="contact-link" href="mailto:athirahnazifa02@gmail.com">
             Email
           </a>
 
-          <a
-            class="contact-link"
-            href="https://www.linkedin.com/in/athirah-nazifa/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a class="contact-link" href="https://www.linkedin.com/in/athirah-nazifa/" target="_blank"
+            rel="noopener noreferrer">
             LinkedIn
           </a>
 
@@ -815,4 +948,5 @@
   </script>
 
 </body>
+
 </html>
